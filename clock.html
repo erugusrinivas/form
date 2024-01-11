@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section style="background-color: #ffffff; overflow-x:hidden; overflow-y:hidden; " onclick="getData()" id="needle">
+        <p id="error" style="width: 100%; position: absolute; z-index: 10; visibility: hidden;"> </p>
+        <div id="chart" class="chart ui-resizable"
+          style="background-color: #7cb7bf; margin: 0 auto; text-align: center;">
+          <div class="vega" style="position: relative;"><svg class="marks" width="420" height="255"
+              style="background-color: #7cb7bf;;">
+              <g transform="translate(0,0)">
+                <g id="g1" class="type-group">
+                  <g transform="translate(0,0)">
+                    <rect class="background" width="420" height="230" style="pointer-events: none; fill: none;">
+                    </rect>
+                    <g id="g2" class="type-arc">
+                      <path transform="translate(210,115)"
+                        d="M-0.00024413026099408453,91.99999999967609A92,92 0 1,1 0.0002441302609828178,91.99999999967609L0.00023882308139623482,89.99999999968313A90,90 0 1,0 -0.00023882308140725663,89.99999999968313Z"
+                        style="fill: rgb(199, 200, 202);"></path>
+                    </g>
+                    <g id="g3" class="type-arc">
+                      <path transform="translate(210,115)"
+                        d="M-39.99957585405936,69.28227718179701A80,80 0 1,1 39.99957585405938,69.282277181797L38.9995864577079,67.55022025225207A78,78 0 1,0 -38.99958645770788,67.55022025225209Z"
+                        style="fill: rgb(109, 110, 112); stroke: rgb(109, 110, 112);"></path>
+                    </g>
+
+                    <!-- <g id="g5" class="type-text units"><text x="210" y="240" text-anchor="middle" dy=".35em"
+                      style="font: 14px Helvetica; "></text></g> -->
+
+                    <g id="g6" class="type-text"><text x="210" y="225" text-anchor="middle" dy=".35em"
+                        style="font: 14px Helvetica; ">23 </text></g>
+                    <g id="g7" class="type-text"><text x="182.50029160033418" y="162.63156556248543"
+                        text-anchor="middle" dy=".35em" style="font: 14px Helvetica;">-20&deg;</text><text
+                        x="164.94679850568357" y="146.54693384645367" text-anchor="middle" dy=".35em"></text><text
+                        x="155.8356125642191" y="124.55087083498778" text-anchor="middle" dy=".35em">0&deg;</text>
+                      <text x="167.867483484105" y="79.64676744570824" text-anchor="middle"
+                        dy=".35em">10&deg;</text><text x="210" y="60" text-anchor="middle"
+                        dy=".35em">20&deg;</text><text x="252.13251651589496" y="79.6467674457082"
+                        text-anchor="middle" dy=".35em">30&deg;</text><text x="264.1643874357809"
+                        y="124.55087083498778" text-anchor="middle" dy=".35em">40&deg;</text><text
+                        x="237.49970839966582" y="162.63156556248543" text-anchor="middle" dy=".35em">50&deg;</text>
+                    </g>
+                    <g id="g8" class="type-arc">
+                      <path transform="translate(210,115)"
+                        d="M-39.99957585405936,69.28227718179701A80,80 0 0,1 -39.99957585405936,69.28227718179701L-33.49964477777471,58.023907139754996A67,67 0 0,0 -33.49964477777471,58.023907139754996Z"
+                        style="fill: rgb(109, 110, 112); stroke: rgb(109, 110, 112); stroke-width: 2;">
+                      </path>
+                      <path transform="translate(210,115)"
+                        d="M-65.53192944627843,45.88644923120535A80,80 0 0,1 -65.53192944627843,45.88644923120535L-54.88299091125818,38.42990123113448A67,67 0 0,0 -54.88299091125818,38.42990123113448Z"
+                        style="fill: rgb(109, 110, 112); stroke: rgb(109, 110, 112); stroke-width: 2;">
+                      </path>
+                      <path transform="translate(210,115)"
+                        d="M-78.78456354295403,13.892175759982212A80,80 0 0,1 -78.78456354295403,13.892175759982212L-65.982071967224,11.634697198985103A67,67 0 0,0 -65.982071967224,11.634697198985103Z"
+                        style="fill: rgb(109, 110, 112); stroke: rgb(109, 110, 112); stroke-width: 2;">
+                      </path>
+                      <path transform="translate(210,115)"
+                        d="M-77.27412948245926,-20.70528707185971A80,80 0 0,1 -77.27412948245926,-20.70528707185971L-64.71708344155962,-17.340677922682506A67,67 0 0,0 -64.71708344155962,-17.340677922682506Z"
+                        style="fill: rgb(109, 110, 112); stroke: rgb(109, 110, 112); stroke-width: 2;">
+                      </path>
+                      <path transform="translate(210,115)"
+                        d="M-61.28366038675635,-51.422883715333484A80,80 0 0,1 -61.28366038675635,-51.422883715333484L-51.32506557390844,-43.066665111591796A67,67 0 0,0 -51.32506557390844,-43.066665111591796Z"
+                        style="fill: rgb(109, 110, 112); stroke: rgb(109, 110, 112); stroke-width: 2;">
+                      </path>
+                      <path transform="translate(210,115)"
+                        d="M-33.80953491822473,-72.50458846592637A80,80 0 0,1 -33.80953491822473,-72.50458846592637L-28.315485494013206,-60.72259284021334A67,67 0 0,0 -28.315485494013206,-60.72259284021334Z"
+                        style="fill: rgb(109, 110, 112); stroke: rgb(109, 110, 112); stroke-width: 2;">
+                      </path>
+                      <path transform="translate(210,115)"
+                        d="M4.898587196589413e-15,-80A80,80 0 0,1 4.898587196589413e-15,-80L4.102566777143633e-15,-67A67,67 0 0,0 4.102566777143633e-15,-67Z"
+                        style="fill: rgb(109, 110, 112); stroke: rgb(109, 110, 112); stroke-width: 2;">
+                      </path>
+                      <path transform="translate(210,115)"
+                        d="M33.8095349182248,-72.50458846592633A80,80 0 0,1 33.8095349182248,-72.50458846592633L28.31548549401327,-60.7225928402133A67,67 0 0,0 28.31548549401327,-60.7225928402133Z"
+                        style="fill: rgb(109, 110, 112); stroke: rgb(109, 110, 112); stroke-width: 2;">
+                      </path>
+                      <path transform="translate(210,115)"
+                        d="M61.28366038675633,-51.42288371533351A80,80 0 0,1 61.28366038675633,-51.42288371533351L51.325065573908425,-43.06666511159182A67,67 0 0,0 51.325065573908425,-43.06666511159182Z"
+                        style="fill: rgb(109, 110, 112); stroke: rgb(109, 110, 112); stroke-width: 2;">
+                      </path>
+                      <path transform="translate(210,115)"
+                        d="M77.27412948245926,-20.7052870718597A80,80 0 0,1 77.27412948245926,-20.7052870718597L64.71708344155964,-17.3406779226825A67,67 0 0,0 64.71708344155964,-17.3406779226825Z"
+                        style="fill: rgb(109, 110, 112); stroke: rgb(109, 110, 112); stroke-width: 2;">
+                      </path>
+                      <path transform="translate(210,115)"
+                        d="M78.78456354295403,13.892175759982221A80,80 0 0,1 78.78456354295403,13.892175759982221L65.982071967224,11.63469719898511A67,67 0 0,0 65.982071967224,11.63469719898511Z"
+                        style="fill: rgb(109, 110, 112); stroke: rgb(109, 110, 112); stroke-width: 2;">
+                      </path>
+                      <path transform="translate(210,115)"
+                        d="M65.53192944627843,45.88644923120536A80,80 0 0,1 65.53192944627843,45.88644923120536L54.88299091125818,38.42990123113449A67,67 0 0,0 54.88299091125818,38.42990123113449Z"
+                        style="fill: rgb(109, 110, 112); stroke: rgb(109, 110, 112); stroke-width: 2;">
+                      </path>
+                      <path transform="translate(210,115)"
+                        d="M39.99957585405938,69.282277181797A80,80 0 0,1 39.99957585405938,69.282277181797L33.49964477777473,58.02390713975499A67,67 0 0,0 33.49964477777473,58.02390713975499Z"
+                        style="fill: rgb(109, 110, 112); stroke: rgb(109, 110, 112); stroke-width: 2;">
+                      </path>
+                    </g>
+                    <g id="g9" class="type-arc">
+                      <path transform="translate(210,115)"
+                        d="M59.14755466510924,-26.95490265495154A65,65 0 0,1 59.14755466510924,-26.95490265495154L0,0Z"
+                        style="fill: rgb(0, 0, 0); stroke: #f7d982; stroke-width: 4;"></path>
+                    </g>
+                    <g id="g10" class="type-symbol">
+                      <path transform="translate(210,115)"
+                        d="M0,5.046265044040321A5.046265044040321,5.046265044040321 0 1,1 0,-5.046265044040321A5.046265044040321,5.046265044040321 0 1,1 1,5.046265044040321Z"
+                        style="fill: #ffffff"></path>
+                    </g>
+                  </g>
+                </g>
+              </g>
+              <defs>
+                <clipPath id="clip">
+                  <rect id="clip-rect" x="0" y="0" width="420" height="230"></rect>
+                </clipPath>
+              </defs>
+            </svg></div>
+          <div class="ui-resizable-handle ui-resizable-e" style="z-index: 90; display: block;"></div>
+          <div class="ui-resizable-handle ui-resizable-s" style="z-index: 90; display: block;"></div>
+          <div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se"
+            style="z-index: 90; display: block;"></div>
+        </div>
+      </section>
+      </div>
+      
+      <iframe width="450" height="260" style="border: 1px solid #cccccc;"
+          src="https://thingspeak.com/channels/1293177/widgets/269346"></iframe>
+          <script src="clock.js"></script>
+</body>
+</html>

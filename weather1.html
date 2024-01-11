@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Api</title>
+    <link rel="stylesheet" href="weather1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="Section">
+        <div class="temp">
+            <!-- <a href="#Weather Api">Weather API</a>
+
+            <input type="text" id="val1" placeholder="Search Your City"> 
+
+             <i class="fa-solid fa-magnifying-glass"></i> 
+             <button onclick="getData()">Search</button>  -->
+             <!-- <i class="fa-solid fa-magnifying-glass"></i>
+            <h1>Weather Info at <span id="city_name"></span></h1> -->
+            <div id="w_ info"></div>
+            <div id="l ow"></div>
+            <div id="h igh"></div>
+            <div id="ri se"></div>
+            <div id="se t"></div>
+            <div id="vis ibility"></div>
+            <div id="humidityStatus"></div>
+            <div id="wind speed"></div>
+            <div id="air qaulity"></div>
+             <div id="uvText"></div> 
+             <div id="da te"></div> 
+             <!-- <div id="mins"></div> -->
+           
+        
+
+
+    <div class="wrapper">
+        <div class="sidebar">
+            <div>
+                <!-- <form action="" class="search" id="search"> -->
+                    <input type="text" id="val1" placeholder="Search Your City">
+                    <button onclick="getData()">Search</button> 
+                    <!-- <button class="increase" onclick="increaseSpeed()">Increase Speed</button> -->
+                    <h1><span id="city_name"></span></h1>
+                     <div id="w_info"></div> 
+                <!-- </form> -->
+                <div class="weather-icon">
+                    <img src="weather icon.png" alt="Icon" id="icon" />
+                </div>
+                <div class="card3">
+                    
+                    <h4 class="card-heading">HIGH </h4><br>
+                    <div class="sun">
+                    <i class="fas fa-sun"></i>
+                    <div id="low"></div>
+                </div>
+                    <div class="content">
+                       
+                    </div>
+                    <div class="condition">
+                   
+                    <!-- <i class="fas fa-cloud"></i> -->
+                </div>
+                </div>
+                <div class="card4">
+                    
+                    <h4 class="card-heading">LOW </h4>
+                    <div class="star">
+                    <i class="fas fa-moon"></i><br>
+                  
+                    <i class="fas fa-star" style="font-size: 10px;margin-top:-35px;margin-left:120px;"></i>
+                    <div id="high"></div>
+                </div>
+                </div>
+                <div class="imgsrc">
+                    <img src="mountain1.png" alt="img">
+                </div>
+                <div class="date-time">
+                    <p id="date-time">'':00:00</p>
+                </div>
+                 <div class="temprature">
+                    <!-- <h1 id="temp">0</h1> -->
+                    <!-- <span class="temp-unit">C</span> -->
+                    <!-- <div class="date-time">
+                        <p id="date-time">Monday,12:00</p> -->
+                    </div>
+                    <!-- <div class="divider"></div>
+                    <div class="condition-rain">
+                        
+                        <div class="rain">
+                           
+                        </div>
+                    </div>
+                    <div class="location">
+                        <div class="location-icon">
+                           
+                        </div>
+                        <div class="location-text">
+                            
+                        </div>
+                    </div>  -->
+                </div>
+                <div class="main">
+                    <nav>
+                        <ul class="options">
+                         <b>Today</b>
+                            
+                        </ul>
+                       
+                        <div class="container">
+                            <!-- <canvas id="canvas" style="width: 695px;" ></canvas> -->
+                            <canvas id="canvas" style="width: 400px; display: block; box-sizing: border-box; height: 200px;" width="700" height="180"></canvas>
+                        </div>
+                    <div id="TIMING"></div>
+                    </nav>
+
+
+                </div>
+            </div>
+            <div class="highlights">
+                <h2 class="heading">highlights</h2>
+                <div class="cards">
+                    <div class="card2">
+                        <!-- <div id="UVIndex"></div>  -->
+                        <h4 class="card-heading">UV INdex</h4>
+                        <div id="UVIndex"></div>
+                        <div class="content">
+                           
+                            <p class="uv-text">LOW</p>
+                        </div>
+                        <div class="semi-donut" style="--percentage:50;--fill:#FFCC66"></div>
+                    </div>
+                    <div class="card2">
+                        
+                        <h4 class="card-heading">WIND STATUS</h4>
+                        <div id="windspeed"></div>
+                        <div class="content">
+                           
+                            <p class="uv-text">LOW</p>
+                        </div>
+                       
+                    </div>
+                    <div class="suncrd">
+                    <div class="card2">
+                        <h4 class="card-heading">Sunset&Sunrise</h4>
+                        <div class="run">
+                       <div id="rise"></div>
+                       <i class="fa-solid fa-arrow-up"></i><br>
+                    </div>
+                        <div id="set"></div>
+                        <i class="fa-solid fa-arrow-down"></i>
+                        <div class="content">
+                            <p class="uv-text">LOW</p>
+                        </div>
+                    </div>
+                </div>
+                    <div class="card2">
+                       
+                        <h4 class="card-heading">HUMIDITY</h4>
+                        <div id="humid"></div>
+                        <div class="content">
+                            <div class="range">
+                                <input type="range" value="" min="0" max="50" oninput="rangeValue.innerText = this.value">
+                               
+                           </div>
+                            <p class="uv-text">LOW</p>
+                        </div>
+                    </div>
+                   
+                    <div class="card2">
+                       
+                        <h4 class="card-heading">VISIBILITY</h4>
+                        <div id="visibility"></div>
+                        <div class="content">
+                            
+                            <p class="uv-text">LOW</p>
+                        </div>
+                    </div>
+                
+                    <div class="good">
+                    <div class="card2">
+                       
+                        <h4 class="card-heading">AIR QUALITY</h4>
+                       <!-- <div id="airqaulity"></div > -->
+                        <div class="air-quality-value"></div>
+                        <div class="content">
+                           <div class="range"id="myRange">
+                            <input type="range" id="vol" name="vol" min="0" max="50">
+                                
+                           </div>
+
+                            <p class="uv-text">LOW</p>
+                        </div>
+                    </div>
+                   
+                </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+     </div>
+    
+  </div> 
+
+  <div class="airquit">
+  <div class="air-quality-meter">
+    <div class="air-qualit y-value"></div>
+   </div>
+   <div class="average-container">
+   
+    <span class="average-value"></span>
+   </div>
+</div>
+    <!-- speedomete -->
+ <div class="metr">
+  <div class="speedometer-conatiner">
+        <div class="speedometer-text">
+            <div class="static">Speed</div>
+            <div class="dynamic">
+            <span class="Km">0</span>
+            
+            </div>
+        </div>
+    <div class="center-point">
+       
+    </div> 
+    <div class="air">
+     <div class="speedometer-center-hide"></div>
+    <div class="speedometer-bottom-hide"></div>
+    <div class="arrow-container">
+        <div class="arrow-wrapper speed-0">
+     <div class="arrow">
+       
+     </div>
+        </div>
+    </div>
+</div>
+    
+    <div class="speedometer-scale speedometer-scale-1"></div>
+    <div class="speedometer-scale speedometer-scale-1 active"></div>
+    <div class="speedometer-scale speedometer-scale-2"></div>
+    <div class="speedometer-scale speedometer-scale-3"></div>
+    <div class="speedometer-scale speedometer-scale-4"></div>
+    <div class="speedometer-scale speedometer-scale-5"></div>
+    <div class="speedometer-scale speedometer-scale-6"></div>
+    <div class="speedometer-scale speedometer-scale-7"></div>
+    <div class="speedometer-scale speedometer-scale-8"></div>
+    <div class="speedometer-scale speedometer-scale-9"></div>
+    <div class="speedometer-scale speedometer-scale-10"></div>
+    <div class="speedometer-scale speedometer-scale-11"></div>
+    <div class="speedometer-scale speedometer-scale-12"></div>
+    <div class="speedometer-scale speedometer-scale-13"></div>
+    <div class="speedometer-scale speedometer-scale-14"></div>
+    <div class="speedometer-scale speedometer-scale-15"></div>
+    <div class="speedometer-scale speedometer-scale-16"></div>
+    <div class="speedometer-scale speedometer-scale-17"></div>
+    <div class="speedometer-scale speedometer-scale-18"></div>
+    <div class="speedometer-scale speedometer-scale-19"></div>
+   
+   
+    </div> 
+</div> 
+    <div class="accelerate-container">
+          
+    </div> 
+    
+</div>  
+<!-- <div class="card">
+    <form id="form">
+        <input
+            type="text"
+            id="search"
+            placeholder="Search by location"
+            autocomplete="off"
+        />
+    </form> -->
+    <main id="main"></main>
+    <!-- </div>  -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="weather1.js"></script>
+</body>
+
+</html>

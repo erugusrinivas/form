@@ -1,0 +1,200 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Creation</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="section">
+        <div class="container">
+            <ul>
+                <a href="#PERSONNEL"><li>Personnel</li></a>
+                <a href="#PHOTO"><li>Photo</li></a>
+                <a href="#contact"><li>Contact<li></a>
+                <a href="#NTA"><li>NTA</li></a>
+                <a href="#Identification"><li>Identification</li></a>
+            </ul>
+        </div>
+        <div id="PERSONNEL">
+        <form>
+            <label for="SerialNumber">SerialNumber:</label>
+            <input type="number" id="serialnumber" size="60"><br>
+            <label for="serialnumber">Employee ID:</label>
+            <input type="text" id="Employee ID" size="60"><br>
+            <label for="serialnumber">firstname:</label>
+            <input type="text" name="firstname" size="60"><br>
+            <label for="text" name="lastname" >lastname:</label>
+            <input type="text" name="lastname"><br>
+            <label for="text" name="Company" >Company:</label>
+            <select>
+                <option value="Company">wipro</option>
+                <option value="Company"size="30">tcs</option>
+                <option value="Comapany"size="30">Grats</option>
+            </select><br>
+            <b>Gender:</b>
+           <div class="check"> 
+            <input type="radio" name="gender"id="gender" value="male">
+            <label for="gender"><h5>male</h5></label>
+           
+            <input type="radio" name="gender" id="gender" value="feamle">
+            <label for="gender">female</label><br><br>
+           </div> 
+            <div class="deptmt"> 
+            <label for="Department">Department  :</label>
+
+            <select name="Company">
+                <option value="Department"></option>
+                <option value="Department">tcs</option>
+                <option value="Department">Tech mahindra</option>
+
+            </select><br>
+         </div> 
+          
+            <label for="Designation">Designation :</label>
+            <select>
+                <option value="ASSociative Engineer">ASSociative engineer</option>
+                <option value="ASSociative Engineer">Bussiness Analyst</option>
+            </select><br>
+            <div class="categ">
+            <label for="Category">Category:</label>
+            <select>
+                <option value="Category">SAIPEM</option>
+                <option value="Category">Bussiness Analyst</option>
+            </select><br>
+        </div>
+            <div class="facility"> 
+            <label for="Facility">Facility:</label>
+            <select>
+                <option value="Category">SAIPEM</option>
+                <option value="Category">Bussiness Analyst</option>
+            </select><br>
+        
+        
+             <div class="status"> 
+            <label for="Status">Status:</label>
+            <select>
+                <option value="Category">Active</option>
+                <option value="Category">UN Active</option>
+
+            </select><br>
+         </div> 
+             <div class="date"> 
+            <label for="Date of birth">DateOfBirth:</label>
+            
+             <input type="date" name="date of birth"><br>
+        </div> 
+            <label for="Date of JOIN">Date ofJoin:</label>
+           
+            <input type="date"><br>
+
+             <label for="HOD">HOD:</label>
+             <input type="radio" name="Email" id="not">
+             <lable for="Yes">Yes</lable>
+             <input type="radio" name="Email" id="not">
+             <lable for="NO">NO</lable>
+            <!-- <input type="radio"name="yes">
+            <label for="gender">YES</label>
+            <input type="radio"name="yes">
+            <label for="gender">NO</label>   -->
+        </div>
+
+        </form>     
+    </div>
+ </div>
+    <div class="Section2">
+        <!-- <h1>CONTACT DETAIL</h1> -->
+        <div id="contact">
+            <h1>CONTACT DETAIL</h1>
+            <label for="personal Email">personal Email:</label>
+            <input type="email" id="mail" name=""><br>
+            <label for="personal Email">Official Email:</label>
+            <input type="email" id="mail" name=""><br>
+            <label for="Personal Phone">Personal Phone:</label>
+            <input type="number" id="Personal Phone" name="">
+            <label for="Official Phone">Official Phone :</label>
+            <input type="number" id="numbr" name="">
+            <label for="corres.Address">Corres.Address:</label>
+            <input type="text" name="Address" id="Address">
+            <label for="Permanent Address">Permanent Address:</label>
+            <input type="text" id="permemnt Address" name="P:Address">
+            <label for="Country">Country :</label>
+            <select>
+                <option>India</option>
+                <option>America</option>
+                <option>Australia</option>
+            </select>
+        </div>
+    </div>
+<div class="section3">
+      
+    <div id="NTA">
+           
+        <h1>TIME AND ATTENDANCE</h1>
+        <label for="TNA ID">TNA ID:</label>
+            <input type="number"id="number" number="">
+            <label for="Contratced Days">Contracted Days:</label>
+           <select>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+
+           </select>
+           <label for="Reporting Manager"> Reporting Manager:</label>
+           <input type="radio" name="reporting mang" id="reporting">
+           <lable for="Yes">Yes</lable>
+           <input type="radio" name="reporting mang" id="reporting">
+           <lable for="No">NO</lable><br>
+           <label for="Reporting To">Reporting To:</label>
+           <select>
+            <!-- <input type="text" name="reporting to" id="reporting to"placeholder="select"> -->
+           
+            <option>Manager</option>
+            <option>Sr.Manager</option>
+            <option>HR</option>
+           </select>
+           <label for="Enable OT">Enable OT:</label>
+           <input type="radio" name="Enable" id="to">
+           <lable for="Yes">Yes</lable>
+           <input type="radio" name="Enable" id="to">
+           <lable for="No">No</lable><br>
+           <label for="Enable Request OT">Enable Request OT:</label>
+           <input type="radio" name="Enble Reqst" id="to">
+           <lable for="Yes">Yes</lable>
+           <input type="radio" name="Enble Reqst" id="to">
+           <lable for="No">No</lable><br>
+           <label for="DefaultShift">Default Shift:</label>
+           <select>
+            <option>Morning Shift</option>
+            <option>General Shift</option>
+            <option>AfterNoon Shift</option>
+            <option>Night Shift</option>
+           </select><br>
+           <label for="Email Notification">Email Notification:</label>
+           <input type="radio" name="Enble Reqst" id="to">
+           <lable for="Yes">Yes</lable>
+           <input type="radio" name="Enble Reqst" id="to">
+           <lable for="No">No</lable><br>
+           <label for="Delegator">Delegator:</label>
+           <input type="radio" name="Email" id="not">
+           <lable for="Yes">Yes</lable>
+           <input type="radio" name="Email" id="not">
+           <lable for="NO">NO</lable>
+           <!-- <input type="radio" name="Delegate"id="">
+           <label for="Yes">Yes</label>
+           <input type="radio" name="Delegate"id="">
+           <label for="No">NO</label> -->
+        </div>
+            
+       
+    </div>
+</body>
+</html>  
+
+
+
+

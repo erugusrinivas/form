@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="popu.css">
+    <title>weather</title>
+</head>
+
+<body>
+
+<div class="row">
+    <div class="col-md-4 col-lg-4">
+
+        <div id="guage">
+            <div id="major-ticks">
+                <span>10&deg;c</span>
+                <span>20c</span>
+                <span>30c</span>
+            </div>
+            <div id="minor-ticks">
+                <span style="---i:1"></span>
+                <span style="---i:2"></span>
+                <span style="---i:3"></span>
+                <span style="---i:4"></span>
+                <span style="---i:5"></span>
+                <span style="---i:6"></span>
+                <span style="---i:7"></span>
+                <span style="---i:8"></span>
+                <span style="---i:9"></span>
+                <span style="---i:10"></span>
+                <span style="---i:11"></span>
+                <span style="---i:12"></span>
+                <span style="---i:13"></span>
+                <span style="---i:14"></span>
+                <span style="---i:15"></span>
+                <span style="---i:16"></span>
+                <span style="---i:17"></span>
+                <span style="---i:18"></span>
+                <span style="---i:19"></span>
+                <span style="---i:20"></span>
+            </div>
+            <div id="minor-ticks-bottom-mask"></div>
+            <div id="bottom-circle"></div>
+            <svg version="1.1" baseProfile="full" width="190" height="190" xmlns="http://www.w3.org/2000/svg">
+
+                <linearGradient id="gradient" x1="0" x2="1" y1="0 " y2="0">
+                    <stop offset="0%" stop-color="#b96e85" />
+                    <stop offset="100%" stop-color="#ae69bb" />
+                </linearGradient>
+                <path d="M 5 95 A 80 80 0 0 1 185 95" stroke="url(#gradient)" fill="none" stroke-width="10"
+                    stroke-linecap="round" stroke-dasharray="0 282.78" />
+            </svg>
+
+            <div id="center-circle">
+                <span id="name">HEATING</span>
+                <span id="temperature">10</span>
+                <img src="th.jpeg">
+            </div>
+            <input type="range" id="range" max="30" min="10" value="10">
+        </div>
+    </div>
+</div>
+
+    <script src="poppu.js"></script>
+ </body>
+</html>

@@ -1,0 +1,97 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Air Quality Average</title>
+ <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    .air-quality-index {
+      font-size: 24px;
+      font-weight: bold;
+      color: #212121;
+    }
+ </style>
+</head>
+<body>
+ <h1>Air Quality Average</h1>
+ <p class="air-quality-index">Loading...</p>
+ <script>
+    async function fetchAirQualityData() {
+      const response = await fetch('https://api.openaq.org/v1/measurements?country=US&limit=100');
+      const data = await response.json();
+      return data.results;
+    }
+
+    function calculateAverageAirQualityIndex(data) {
+      let sum = 0;
+      data.forEach(entry => {
+        sum += entry.averagingPeriod.hours;
+      });
+      return sum / data.length;
+    }
+
+    async function getAverageAirQualityIndex() {
+      const data = await fetchAirQualityData();
+      const averageAirQualityIndex = calculateAverageAirQualityIndex(data);
+      return averageAirQualityIndex;
+    }
+
+    function displayAverageAirQualityIndex(index) {
+      document.querySelector('.air-quality-index').textContent = index.toFixed(2);
+    }
+
+    function init() {
+      getAverageAirQualityIndex().then(index => {
+        displayAverageAirQualityIndex(index);
+      });
+    }
+
+    init();
+ </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Air Quality App</title>
+    <style>
+        /* Add CSS styles here */
+    </style>
+</head>
+<body>
+    <h1>Air Quality App</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>City</th>
+                <th>AQI</th>
+                <th>PM2.5</th>
+                <th>Ozone</th>
+            </tr>
+        </thead>
+        <tbody id="data">
+        </tbody>
+    </table>
+    <script>
+        fetch('https://api.airvisual.com/v2/city?city=Bengaluru&state=Karnataka&country=India&key=YOUR_API_KEY')
+            .then(response => response.json())
+            .then(data => {
+                const city = data.data.city;
+                const aqi = data.data.current.pollution.aqius;
+                const pm25 = data.data.current.pollution.pm25;
+                const ozone = data.data.current.pollution.o3;
+                const row = `<tr><td>${city}</td><td>${aqi}</td><td>${pm25}</td><td>${ozone}</td></tr>`;
+                document.getElementById('data').innerHTML = row;
+            })
+            .catch(error => console.error(error));
+    </script>
+</body>
+</html>

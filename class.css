@@ -1,0 +1,26 @@
+input[type=submit]{
+    background-color: orangered;
+    border: none;
+    color:white;
+    padding: 5px 10px;
+}
+input[type=submit].disabled{
+    background-color: orangered;
+    border: none;
+    color:white;
+    padding: 5px 10px;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+.validate{
+    color: red;
+    font-size: 12px;
+    padding: 5px 2px;
+}
+/* .hide{
+    /* display: none; */
+    /* border: red; */
+/* } */ 
+.red{
+    border-color: red;
+}
